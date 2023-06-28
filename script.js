@@ -11,16 +11,9 @@ var verCharacter;
 character = ["!", "#", "$", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "^", "`", "{", "|", "}", "~"];
 number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 letter = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-upper = [];
+upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 var choices;
-var toUpper = function (a) {
-  return a.toUpperCase();
-}
-
-letterUp = letter.map(toUpper);
-
-// var password = "";
 
 function generatePassword() {
   var length = prompt("To generate a password, start by entering a password length value between 8 and 128.");
@@ -68,18 +61,21 @@ function generatePassword() {
     choices = character.concat(character);
   };
 
-  for (var i = 0; i < submit; i++) {
+  var password = [];
+
+  for (var i = 0; i < length; i++) {
     var pickChoices = choices[Math.floor(Math.random() * choices.length)];
-    password += choices.substring(pickChoices);
+    password.push(pickChoices);
 
   }
-  
-  return password;
+
+  var pword = password.join("");
+  return pword;
 }
 
 // Write password to the #password input
   function writePassword() {
-    var password = generatePassword();
+    password = generatePassword();
     var passwordText = document.querySelector("#password");
     
     passwordText.value = password;
