@@ -22,7 +22,7 @@ function generatePassword() {
   if (!length) {
     prompt("Please enter a value to continue with password setup. The password length can be any number between 8 and 128.");
       } else if (length < 8 || length > 128) {
-        prompt("Please enter a value between 8 and 128.");
+        alert("The password length must be between 8 and 128. Please click the Generate Password button to start over.");
       } else {
         verNumber = confirm("Click 'ok' if you would like to include NUMBERS in your password, othewise click 'cancel' to move to the next criteria.");
         verLowercase = confirm("Click 'ok' if you would like to include LOWERCASE LETTERS in your password, othewise click 'cancel' to move to the next criteria.");
@@ -31,7 +31,7 @@ function generatePassword() {
       }
   
   if (!verNumber && !verLowercase && !verUppercase && !verCharacter) {
-    alert("You must include at least one of the criteria (number, lowercase letters, uppercase letters, or characters. Note: For the most secure password we recomment accepting all four.")
+    alert("You must include at least one of the criteria (number, lowercase letters, uppercase letters, or characters. Note: For the most secure password we recomment accepting all four. Please click the Generate Password button to start over.")
     } else if (verNumber && verLowercase && verUppercase && verCharacter) {
       choices = all.concat(number, letter, upper, character);
     } else if (verNumber && verLowercase && verUppercase) {
