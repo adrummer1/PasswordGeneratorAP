@@ -1,4 +1,5 @@
 # PasswordGeneratorAP
+
 Random password generator using Javascript
 
 ## About this page and its application
@@ -7,14 +8,14 @@ The purpose of this application is to allow an employee that has access to sensi
 
 The following steps and acknowlegements were taken to achieve the criteria requested by the client for this application:
 
-* The client requires a series of prompts that allows a user to select some criteria for the password they are generating.
-* The criteria needs to include a password length range between 8 and 128 characters.
-* If the user chooses a password lower than 8 or greater than 128 characters they receive a prompt that reiterates the range.
-* If the user does not choose at least one criteria they receive an alert that indicates at least one criteria is required to generate a password.
-* The criteria needs to include the ability for the user to choose whether to accept numbers, lower case letters, upper case letters, and special characters.
-* When a user clicks on the Generate Password button they receive a series of prompts allowing them to choose through the criteria as described above.
-* To achieve this I wrote a function in the script file that takes into consideration the various password output options based on the user's selected criteria and then generates the random password using the Math method. The password is then printed to the page's text box.
-* The script file includes comments throughout that note the different components of the script.
+- The client requires a series of prompts that allows a user to select some criteria for the password they are generating.
+- The criteria needs to include a password length range between 8 and 128 characters.
+- If the user chooses a password lower than 8 or greater than 128 characters they receive a prompt that reiterates the range.
+- If the user does not choose at least one criteria they receive an alert that indicates at least one criteria is required to generate a password.
+- The criteria needs to include the ability for the user to choose whether to accept numbers, lower case letters, upper case letters, and special characters.
+- When a user clicks on the Generate Password button they receive a series of prompts allowing them to choose through the criteria as described above.
+- To achieve this I wrote a function in the script file that takes into consideration the various password output options based on the user's selected criteria and then generates the random password using the Math method. The password is then printed to the page's text box.
+- The script file includes comments throughout that note the different components of the script.
 
 ## Credits
 
@@ -26,4 +27,4 @@ To accomplish this project I leaned on the activities and lessons learned in the
 
 ## Deployed Link
 
-[Here is a link to the deployed application] (https://adrummer1.github.io/PasswordGeneratorAP/)
+[Here is a link to the deployed application](https://adrummer1.github.io/PasswordGeneratorAP/)
