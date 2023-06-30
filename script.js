@@ -23,6 +23,7 @@ function generatePassword() {
     prompt("Please enter a value to continue with password setup. The password length can be any number between 8 and 128.");
       } else if (length < 8 || length > 128) {
         alert("The password length must be between 8 and 128. Please click the Generate Password button to start over.");
+        return
       } else {
         verNumber = confirm("Click 'ok' if you would like to include NUMBERS in your password, othewise click 'cancel' to move to the next criteria.");
         verLowercase = confirm("Click 'ok' if you would like to include LOWERCASE LETTERS in your password, othewise click 'cancel' to move to the next criteria.");
