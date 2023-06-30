@@ -2,7 +2,7 @@
 
 var generateBtn = document.querySelector("#generate");
 
-// var submit;
+// Set variables for the application.
 var verNumber;
 var verLowercase;
 var verUppercase;
@@ -16,6 +16,7 @@ var all = [];
 
 var choices;
 
+// The generate Password function achieves the user's ability to generate a random password based on the criteria selection. 
 function generatePassword() {
   var length = prompt("To generate a password, start by entering a password length value between 8 and 128.");
   if (!length) {
@@ -63,18 +64,21 @@ function generatePassword() {
       choices = all.concat(character);
     };
 
+  // Declaring password within the generatePassword function. 
   var password = [];
 
+  // Below uses the Math method generates the random password and pushes to the text box on the page.
   for (var i = 0; i < length; i++) {
     var pickChoices = choices[Math.floor(Math.random() * choices.length)];
     password.push(pickChoices);
   }
 
+  // Remove the separators between password characters.
   var pword = password.join("");
   return pword;
 }
 
-// Write password to the #password input
+// Write password to the #password input. Provided in starter code.
   function writePassword() {
     password = generatePassword();
     var passwordText = document.querySelector("#password");
@@ -82,5 +86,5 @@ function generatePassword() {
     passwordText.value = password;
   }  
 
-// Add event listener to generate button
+// Add event listener to generate button Provided in starter code.
 generateBtn.addEventListener("click", writePassword);
